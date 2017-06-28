@@ -1,3 +1,114 @@
+body {
+  width:960px;
+  margin: 0 auto;
+  font-family: helvetica;
+}
+
+a {
+  text-decoration: none;
+  color: #888;
+}
+
+header {
+  background: #444;
+  height: 100px;
+}
+
+.inner {
+  width:960px;
+  margin: 0 auto;
+}
+
+header ul li{
+  display: inline-block;
+  margin-top: 40px;
+  margin-right: 75px;
+}
+
+main  {
+  width: 960px;
+  margin: 30px auto;
+}
+
+main ul li {
+  display: inline-block;
+  float:left;
+  margin: 30px 20px 20px 0px;
+}
+
+.sub_banners li:last-child {
+  margin-right: 0px;
+}
+
+section img {
+  margin:12px;
+}
+
+.right {
+  width:50%-30px;
+  padding: 30px;
+  margin-bottomL 30px;
+}
+
+.right p {
+  height:320px;
+  overflow:auto;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 24px;
+}
+
+button {
+  border: none;
+  padding: 10px 30px;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: 350ms all;
+  cursor: pointer;
+}
+
+button:hover {
+  background: green;
+}
+
+footer {
+  clear: both;
+  background: #444;
+  height: 150px;
+}
+nav {
+  text-align: center;
+}
+nav ul li:hover {
+  background-color: orange;
+}
 h1 {
-  font-size: 100px;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+main {
+  background-color: grey;
+}
+#bradyTable {
+  position: relative;
+  left: 35px;
+  background-color: orange;
+  width: 900px;
+  height: 900px;
+}
+#new-game {
+  position: relative;
+  left: 415px;
+}
+
+
+#foot {
+  text-align: center;
+  position: relative;
+  top: 70px;
 }
