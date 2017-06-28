@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="css/style.css" rel="stylesheet">
     <meta charset="utf-8">
     <title>Click a Brady</title>
   </head>
   <body>
     <header>
-      <nav>
-        <h1 id="title">Click a Brady</h1>
-        <ul id="nav">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="about-us.html">ABOUT US</a></li>
-        </ul>
-      </nav>
+      <div class='inner'>
+        <nav>
+          <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='scores.html'>Scores</a></li>
+            <li><a href='settings.html'>Settings</a></li>
+            <li><a href='about-us.html'>About</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
-    <section>
-      <ol id="scores-table"></ol>
-      <label id="checkbox-label" for="compare-type">Sort by time ÷ turns</label>
-      <input id="compare-type" type="checkbox"></br>
-      <button id="clear-button" type="click">CLEAR SCORES</button>
-    </section>
-
-    <script src="scores.js"></script>
-  </body>
+  <main>
+    <h1> User Name</h1>
+    <p> </p>
+    <table>
+      <tr>
+        <td>Username</td>
+        <td> Score </td>
+      <tr>
+        <td>G2KZ</td>
+        <td> 17 </td>
+    </table>
+    <p> <a href="index.html">Play Again?</a> </p>
+  </main>
+<footer>
+  <p id="foot"> Small Details down here</p>
+</footer>
+<script src="scores.js"></script>
+</body>
 </html>
