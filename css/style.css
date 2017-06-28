@@ -41,8 +41,7 @@ main ul li {
 }
 
 section img {
-  float:left;
-  margin: 30px;
+  margin:12px;
 }
 
 .right {
@@ -96,8 +95,17 @@ main {
   background-color: grey;
 }
 #bradyTable {
+  position: relative;
+  left: 35px;
   background-color: orange;
+  width: 900px;
+  height: 900px;
 }
+#new-game {
+  position: relative;
+  left: 415px;
+}
+
 
 #foot {
   text-align: center;
