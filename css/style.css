@@ -125,23 +125,57 @@ form {
   position:relative;
   left: 430px;
 }
-
 #gabby {
-  float:left;
+  background-color: blue;
+}
+
+#gabby h1{
+  text-align: left;
+  position:relative;
+  left: 80px;
+}
+#gabby img {
+
+}
+
+#gabby div {
+  text-align: right;
+  bottom: 80px;
+}
+
+#gabby p {
+  display:inline;
+  text-align: right;
 }
 
 #katherine {
-  margin-left: 10px;
+  background-color: pink;
+}
+#katherine h1{
+  text-align:left;
+  position: relative;
+  left: 50px;
 }
 
 #kyle {
-  float:left;
-  margin-top: 10px;
+  background-color: orange;
 }
 
+#kyle h1{
+  text-align: left;
+  position:relative;
+  left: 70px
+}
+
+
 #zach {
-  margin-left: 10px;
-  margin-top: 10px;
+  background-color: purple;
+}
+
+#zach h1{
+  text-align: left;
+  position:relative;
+  left: 55px;
 }
 
 img {
@@ -151,4 +185,7 @@ img {
 
 #descrip {
   margin-bottom: 10px;
+}
+html {
+  background-color: black;
 }
