@@ -1,11 +1,15 @@
 'use strict';
 
 var soundPreference = document.getElementsByName('sound');
+var currentValue = 1;
 
-var currentValue = 0;
+function startClickValue() {
+  document.getElementById('sound-on').click();
+}
+
 function handleClick(myRadio) {
-  alert('Old value: ' + currentValue);
-  alert('New value: ' + myRadio.value);
+  console.log('Old value: ' + currentValue);
+  console.log('New value: ' + myRadio.value);
   currentValue = myRadio.value;
   console.log(currentValue);
   storeToLocalStorage(currentValue);
@@ -40,3 +44,4 @@ function storeToLocalStorage(currentValue) {
 }
 
 storeToLocalStorage();
+startClickValue();
