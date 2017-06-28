@@ -2,6 +2,7 @@
 var bradyTable = document.getElementById('bradyTable');
 var correctImage = document.getElementById('marsha');
 var clickNewGameButton = document.getElementById('new-game');
+var counter = 0;
 var array = [];
 
 function BradyImage (src, name) {
@@ -63,7 +64,7 @@ function correctImageListener() {
   console.log('Inside correctImageListener!');
   correctImage = document.getElementById('marsha');
   // console.log(correctImage);
-  correctImage.addEventListener('click', handleNewGameClick);
+  correctImage.addEventListener('click', handleCorrectImageClick);
 }
 
 // New Game Handler
@@ -72,6 +73,19 @@ function handleNewGameClick(event) {
   event.preventDefault();
   // console.log('Testing event handler!');
   bradyTable.innerHTML = '';
+  counter = 0;
+  shuffle();
+  initRender();
+}
+
+// Correct Image Handler
+function handleCorrectImageClick(event) {
+  console.log('Inside handleCorrectImageClick!');
+  event.preventDefault();
+  // console.log('Testing event handler!');
+  bradyTable.innerHTML = '';
+  counter += 1;
+  console.log('Counter is ' + counter);
   shuffle();
   initRender();
 }
