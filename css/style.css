@@ -6,17 +6,16 @@ body {
 
 a {
   text-decoration: none;
-  color: #888;
+  color: black;
+}
+
+a:hover {
+  background-color: orange;
 }
 
 header {
   background: #444;
   height: 100px;
-}
-
-.inner {
-  width:960px;
-  margin: 0 auto;
 }
 
 header ul li{
@@ -36,26 +35,10 @@ main ul li {
   margin: 30px 20px 20px 0px;
 }
 
-.sub_banners li:last-child {
-  margin-right: 0px;
-}
-
 section img {
   margin:12px;
-}
-
-.right {
-  width:50%-30px;
-  padding: 30px;
-  margin-bottomL 30px;
-}
-
-.right p {
-  height:320px;
-  overflow:auto;
-  font-size: 18px;
-  font-style: italic;
-  line-height: 24px;
+  height: 250px;
+  width:250px;
 }
 
 button {
@@ -79,21 +62,28 @@ footer {
   background: #444;
   height: 150px;
 }
+
 nav {
   text-align: center;
 }
+
 nav ul li:hover {
   background-color: orange;
 }
+
 h1 {
   text-align: center;
 }
+
 p {
+  color:black;
   text-align: center;
 }
+
 main {
   background-color: grey;
 }
+
 #bradyTable {
   position: relative;
   left: 35px;
@@ -101,14 +91,64 @@ main {
   width: 900px;
   height: 900px;
 }
+
 #new-game {
   position: relative;
   left: 415px;
 }
 
-
 #foot {
   text-align: center;
   position: relative;
   top: 70px;
+}
+
+table {
+  position: relative;
+  left: 370px;
+  border: 2px black solid;
+  background-color: black;
+}
+
+tr {
+  border: 2px black solid;
+  background-color: grey;
+}
+
+td {
+  border: 2px black solid;
+  text-align: center;
+  padding: 15px;
+}
+
+form {
+  position:relative;
+  left: 430px;
+}
+
+#gabby {
+  float:left;
+}
+
+#katherine {
+  margin-left: 10px;
+}
+
+#kyle {
+  float:left;
+  margin-top: 10px;
+}
+
+#zach {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+img {
+  position: relative;
+  left: 20px;
+}
+
+#descrip {
+  margin-bottom: 10px;
 }

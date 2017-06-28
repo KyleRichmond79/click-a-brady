@@ -1,7 +1,8 @@
 'use strict';
+var clickNewGameButton = document.getElementById('new-game');
 var bradyTable = document.getElementById('bradyTable');
 var correctImage = document.getElementById('marsha');
-var clickNewGameButton = document.getElementById('new-game');
+var incorrectImage = document.getElementById('carol');
 var counter = 0;
 var array = [];
 
@@ -30,6 +31,7 @@ function initRender() {
     bradyTable.appendChild(imgEl);
   }
   correctImageListener();
+  incorrectImageListener();
 }
 
 function shuffle() {
@@ -58,33 +60,19 @@ function newGameListener() {
   console.log('Inside newGameListener!');
   clickNewGameButton.addEventListener('click', handleNewGameClick);
 }
-//clock countdown
-function ClockCountDown(elements, games) {
-  var clock = showTimer(),
-    offset,
-    clock,
-    interval;
-  games = games || {};
-  games.delay = games.delay || 1;
-  elements.appendChild(clock);
-
-  function generateClock() {
-    var clockDom = document.createElement('span');
-    clockDom.setAttribute('id', 'timerDomElJS');
-    return timerDomElJS;
-  }
-  function begin(){
-    if (!interval) {
-      offset = Date.Now();
-      setInterval(function (update, gamesdelay)
-  }
-};
-// New Move Listener
 function correctImageListener() {
   console.log('Inside correctImageListener!');
   correctImage = document.getElementById('marsha');
   // console.log(correctImage);
   correctImage.addEventListener('click', handleCorrectImageClick);
+}
+
+// Incorrect Image Listener
+function incorrectImageListener() {
+  console.log('Inside incorrectImageListener!');
+  carol = document.getElementById('carol');
+  // console.log(correctImage);
+  carol.addEventListener('click', handleIncorrectImageClick);
 }
 
 // New Game Handler
@@ -110,6 +98,19 @@ function handleCorrectImageClick(event) {
   initRender();
 }
 
+// Incorrect Image Handler
+function handleIncorrectImageClick(event) {
+  console.log('Inside handleIncorrectImageClick!');
+  event.preventDefault();
+  // console.log('Testing event handler!');
+  bradyTable.innerHTML = '';
+  counter -= 1;
+  console.log('Counter is ' + counter);
+  shuffle();
+  initRender();
+}
+
 initRender();
 newGameListener();
-// correctImageListener();
+incorrectImageListener();
+correctImageListener();
