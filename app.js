@@ -58,7 +58,27 @@ function newGameListener() {
   console.log('Inside newGameListener!');
   clickNewGameButton.addEventListener('click', handleNewGameClick);
 }
+//clock countdown
+function ClockCountDown(elements, games) {
+  var clock = showTimer(),
+    offset,
+    clock,
+    interval;
+  games = games || {};
+  games.delay = games.delay || 1;
+  elements.appendChild(clock);
 
+  function generateClock() {
+    var clockDom = document.createElement('span');
+    clockDom.setAttribute('id', 'timerDomElJS');
+    return timerDomElJS;
+  }
+  function begin(){
+    if (!interval) {
+      offset = Date.Now();
+      setInterval(function (update, gamesdelay)
+  }
+};
 // New Move Listener
 function correctImageListener() {
   console.log('Inside correctImageListener!');
