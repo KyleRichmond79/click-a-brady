@@ -1,5 +1,6 @@
 'use strict';
 var bradyTable = document.getElementById('bradyTable');
+var correctImage = document.getElementById('marsha');
 var clickNewGameButton = document.getElementById('new-game');
 var array = [];
 
@@ -23,13 +24,15 @@ function initRender() {
   for (var i = 0; i < array.length; i++) {
     var imgEl = document.createElement('img');
     imgEl.src = array[i].src;
-    console.log('image ', imgEl.src);
+    // console.log('image ', imgEl.src);
     imgEl.id = array[i].name;
     bradyTable.appendChild(imgEl);
   }
+  correctImageListener();
 }
 
 function shuffle() {
+  console.log('Inside shuffle!');
   var m = array.length, t, i;
   // While there remain elements to shuffle…
   while (m) {
@@ -42,7 +45,7 @@ function shuffle() {
     array[m] = array[i];
     array[i] = t;
   }
-  console.log('Randomized values: ' + array);
+  // console.log('Randomized values: ' + array);
   return array;
   initRender();
 }
@@ -51,17 +54,28 @@ function shuffle() {
 // when user clicks New Game button, newGameListener triggered
 // newGameListener triggers handleGameRefresh event handler
 function newGameListener() {
+  console.log('Inside newGameListener!');
   clickNewGameButton.addEventListener('click', handleNewGameClick);
+}
+
+// New Move Listener
+function correctImageListener() {
+  console.log('Inside correctImageListener!');
+  correctImage = document.getElementById('marsha');
+  // console.log(correctImage);
+  correctImage.addEventListener('click', handleNewGameClick);
 }
 
 // New Game Handler
 function handleNewGameClick(event) {
+  console.log('Inside handleNewGameClick!');
   event.preventDefault();
-  console.log('Testing event handler!');
+  // console.log('Testing event handler!');
   bradyTable.innerHTML = '';
   shuffle();
   initRender();
 }
 
-newGameListener();
 initRender();
+newGameListener();
+// correctImageListener();
