@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Settings</h1>
+
+    <form action="" method="POST">
+        <label>Sound On/Off:</label>
+        <br>
+        <input type="radio" name="myRadios" onclick="handleClick(this);" value="1"/>On
+        <br>
+        <input type="radio" name="myRadios" onclick="handleClick(this);" value="2" />Off
+        <br>
+        <div id="msg"></div>
+        <input type="submit" value="Confirm"/>
+    </form>
+
+    <script type='text/javascript' src="settings.js"></script>
+  </body>
+</html>
