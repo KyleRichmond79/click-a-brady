@@ -60,6 +60,45 @@ function newGameListener() {
   console.log('Inside newGameListener!');
   clickNewGameButton.addEventListener('click', handleNewGameClick);
 }
+function ClockCountDown(elements, games) {
+  var clock = showTimer(),
+    offset,
+    clock,
+    interval;
+  games = games || {};
+  games.delay = games.delay || 1;
+  elements.appendChild(clock);
+
+  reset();
+
+  function generateClock() {
+    var clockDom = document.createElement('span');
+    clockDom.setAttribute('id', 'timerDomElJS');
+    return timerDomElJS;
+  }
+  function begin(){
+    if (!interval) {
+      offset = Date.Now();
+      setInterval(function (update, games.delay)
+  }
+}
+  function stop(){
+    if (interval){
+      clearInterval(interval);
+      interval = null;
+    }
+  }
+  function reset(){
+    clock = 0;
+    render();
+  }
+    function reCount(){
+      var thisTime = ()
+    }
+    function render(){
+      timer.innerHTML = clock / 1000;
+    }
+
 function correctImageListener() {
   console.log('Inside correctImageListener!');
   correctImage = document.getElementById('marsha');
