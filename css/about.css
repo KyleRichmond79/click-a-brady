@@ -1,0 +1,65 @@
+#gabby {
+  background-color: blue;
+}
+
+#gabby h1{
+  text-align: left;
+  position:relative;
+  left: 80px;
+}
+#gabby img {
+
+}
+
+#gabby aside {
+  width:300px;
+  text-align: right;
+  bottom: 80px;
+}
+
+#gabby p {
+  display:inline;
+  text-align: right;
+}
+
+#katherine {
+  background-color: pink;
+}
+#katherine h1{
+  text-align:left;
+  position: relative;
+  left: 50px;
+}
+
+#kyle {
+  background-color: orange;
+}
+
+#kyle h1{
+  text-align: left;
+  position:relative;
+  left: 70px
+}
+
+
+#zach {
+  background-color: purple;
+}
+
+#zach h1{
+  text-align: left;
+  position:relative;
+  left: 55px;
+}
+
+img {
+  position: relative;
+  left: 20px;
+}
+
+#descrip {
+  margin-bottom: 10px;
+}
+html {
+  background-color: black;
+}
