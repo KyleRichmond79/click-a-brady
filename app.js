@@ -2,7 +2,7 @@
 var clickNewGameButton = document.getElementById('new-game');
 var bradyTable = document.getElementById('bradyTable');
 var correctImage = document.getElementById('marsha');
-var incorrectImage = document.getElementById('bradyTable');
+var incorrectImage = document.getElementById('carol');
 var counter = 0;
 var array = [];
 
@@ -72,9 +72,9 @@ function correctImageListener() {
 // Incorrect Image Listener
 function incorrectImageListener() {
   console.log('Inside incorrectImageListener!');
-  bradyTable = document.getElementById('bradyTable');
+  carol = document.getElementById('carol');
   // console.log(correctImage);
-  bradyTable.addEventListener('click', handleIncorrectImageClick);
+  carol.addEventListener('click', handleIncorrectImageClick);
 }
 
 // New Game Handler
@@ -94,9 +94,7 @@ function handleCorrectImageClick(event) {
   event.preventDefault();
   // console.log('Testing event handler!');
   bradyTable.innerHTML = '';
-  // added 2 instead of 1 because clicking anywhere on bradyTable incl Marsha
-  // subtracts 1 from counter
-  counter += 2;
+  counter += 1;
   console.log('Counter is ' + counter);
   shuffle();
   initRender();

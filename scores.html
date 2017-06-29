@@ -21,15 +21,27 @@
 
     </header>
   <main>
-    <h1> User Name</h1>
+    <!-- <h1>User Name</h1> -->
+    <form id="gameForm">
+      <fieldset id="fieldset">
+        <label for="name">Enter Your Name:</label>
+        <input id="playerName" name="name" type="text">
+        <br>
+        <canvas id="canvas" width="100" height="50"></canvas>
+        <button id="submit-button" type="submit">Submit</button>
+      </fieldset>
+    </form>
+
     <p> </p>
-    <table>
+    <table id="scoreTable">
       <tr>
         <td>Username</td>
         <td> Score </td>
+      </tr>
       <tr>
-        <td>G2KZ</td>
+        <td>GK<sup>2</sup>Z</td>
         <td> 17 </td>
+      </tr>
     </table>
     <p> <a href="index.html">Play Again?</a> </p>
   </main>
