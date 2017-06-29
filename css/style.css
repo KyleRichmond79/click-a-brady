@@ -78,7 +78,7 @@ h1 {
 }
 
 p {
-  color:black;
+  color: black;
   text-align: center;
 }
 
@@ -103,6 +103,7 @@ main {
   text-align: center;
   position: relative;
   top: 70px;
+  color: #A4A9AD;
 }
 
 table {
@@ -172,7 +173,7 @@ img {
 }
 #clockdiv{
     font-family: sans-serif;
-    color: #fff;
+    color: black;
     display: inline-block;
     font-weight: 100;
     text-align: center;
@@ -182,14 +183,14 @@ img {
 #clockdiv > div{
     padding: 10px;
     border-radius: 3px;
-    background: orange;
+    background: #A9CCE3;
     display: inline-block;
 }
 
 #clockdiv div > span{
     padding: 15px;
     border-radius: 3px;
-    background: grey;
+    background: white;
     display: inline-block;
 }
 
