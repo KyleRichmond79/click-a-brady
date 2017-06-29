@@ -4,10 +4,6 @@ body {
   font-family: helvetica;
 }
 
-h2 {
-  text-align: center;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -46,12 +42,9 @@ section img {
 }
 
 button {
-  display:block;
-  position: relative;
-  right: 100px;
   border: none;
   padding: 10px 30px;
-  background: blue;
+  background: #000;
   color: #fff;
   border-radius: 5px;
   font-size: 16px;
@@ -132,63 +125,26 @@ form {
   position:relative;
   left: 430px;
 }
+
 #gabby {
-  background-color: blue;
-}
-
-#gabby h1{
-  text-align: left;
-  position:relative;
-  left: 80px;
-}
-#gabby img {
-
-}
-
-#gabby aside {
-  position:relative;
-
-  width:300px;
-  text-align: right;
-  bottom: 80px;
-}
-
-#gabby p {
-  display:inline;
-  text-align: right;
+  float:left;
 }
 
 #katherine {
-  background-color: pink;
-}
-#katherine h1{
-  text-align:left;
-  position: relative;
-  left: 50px;
+  margin-left: 10px;
 }
 
 #kyle {
-  background-color: orange;
+  float:left;
+  margin-top: 10px;
 }
-
-#kyle h1{
-  text-align: left;
-  position:relative;
-  left: 70px
-}
-
 
 #zach {
-  background-color: purple;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
-#zach h1{
-  text-align: left;
-  position:relative;
-  left: 55px;
-}
-
-section img {
+img {
   position: relative;
   left: 20px;
 }
@@ -196,18 +152,11 @@ section img {
 #descrip {
   margin-bottom: 10px;
 }
-
-html {
-  background-color: black;
-}
-
+/*clock style*/
 #clock {
   text-align: left;
 }
 #clockdiv{
-  display:block;
-    position:relative;
-    left: 430px;
     font-family: sans-serif;
     color: #fff;
     display: inline-block;
@@ -216,11 +165,21 @@ html {
     font-size: 30px;
 }
 
-#gameForm {
-  left: 300px;
-  border: none;
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: orange;
+    display: inline-block;
 }
 
-#fieldset {
-  border-style: none;
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: grey;
+    display: inline-block;
+}
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
 }
