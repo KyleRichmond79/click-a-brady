@@ -1,55 +1,149 @@
-#gabby {
-  background-color: blue;
+body {
+  width:960px;
+  margin: 0 auto;
+  font-family: helvetica;
 }
 
-#gabby h1{
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color: orange;
+}
+
+header {
+  background: #444;
+  height: 100px;
+}
+
+header ul li{
+  display: inline-block;
+  margin-top: 40px;
+  margin-right: 75px;
+}
+
+
+main ul li {
+  display: inline-block;
+  float:left;
+  margin: 30px 20px 20px 0px;
+}
+
+section img {
+  margin:12px;
+  height: 250px;
+  width:250px;
+}
+
+footer {
+  clear: both;
+  background: #444;
+  height: 150px;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul li:hover {
+  background-color: orange;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  color:black;
+  text-align: center;
+}
+
+main {
+  background-color: grey;
+}
+
+#foot {
+  text-align: center;
+  position: relative;
+  top: 70px;
+}
+
+#gabby {
+
+}
+
+#gabby h1 {
   text-align: left;
   position:relative;
-  left: 80px;
-}
-#gabby img {
-
-}
-
-#gabby aside {
-  width:300px;
-  text-align: right;
-  bottom: 80px;
+  left: 75px;
 }
 
 #gabby p {
-  display:inline;
-  text-align: right;
+  text-align: left;
+}
+
+#gabby aside {
+  position:relative;
+  left: 400px;
+  bottom: 200px;
+  width: 500px;
 }
 
 #katherine {
-  background-color: pink;
+
 }
-#katherine h1{
-  text-align:left;
+
+#katherine h1 {
+  text-align: left;
+  position: relative;
+  left: 55px;
+}
+
+#katherine p {
+  text-align: left;
+}
+
+#katherine aside {
+  position: relative;
+  left: 400px;
+  bottom: 200px;
+  width: 500px;
+}
+
+#kyle {
+
+}
+
+#kyle h1 {
+  text-align: left;
+  position: relative;
+  left: 70px;
+}
+
+#kyle aside {
+  position: relative;
+  left: 400px;
+  bottom: 200px;
+  width: 500px;
+}
+
+#zach {
+
+}
+
+#zach h1 {
+  text-align: left;
   position: relative;
   left: 50px;
 }
 
-#kyle {
-  background-color: orange;
-}
-
-#kyle h1{
-  text-align: left;
-  position:relative;
-  left: 70px
-}
-
-
-#zach {
-  background-color: purple;
-}
-
-#zach h1{
-  text-align: left;
-  position:relative;
-  left: 55px;
+#zach aside {
+  position: relative;
+  left: 400px;
+  bottom: 200px;
+  width: 500px;
 }
 
 img {
@@ -59,7 +153,4 @@ img {
 
 #descrip {
   margin-bottom: 10px;
-}
-html {
-  background-color: black;
 }
