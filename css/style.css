@@ -55,7 +55,7 @@ button {
 }
 
 button:hover {
-  background: green;
+  background: #0AA0F3;
 }
 
 footer {
@@ -182,14 +182,14 @@ img {
 #clockdiv > div{
     padding: 10px;
     border-radius: 3px;
-    background: orange;
+    background: #0AA0F3;
     display: inline-block;
 }
 
 #clockdiv div > span{
     padding: 15px;
     border-radius: 3px;
-    background: grey;
+    background: #EF5B5B;
     display: inline-block;
 }
 
