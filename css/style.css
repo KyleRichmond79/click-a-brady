@@ -138,7 +138,8 @@ form {
 
 }
 
-#gabby div {
+#gabby aside {
+  width:300px;
   text-align: right;
   bottom: 80px;
 }
