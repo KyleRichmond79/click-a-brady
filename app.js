@@ -80,6 +80,11 @@ function incorrectImageListener() {
   bradyTable.addEventListener('click', handleIncorrectImageClick);
 }
 
+// sending counter to local storage
+function scoreToLocalStorage() {
+  localStorage.setItem('score', 'counter');
+}
+
 // New Game Handler
 function handleNewGameClick(event) {
   event.preventDefault();

@@ -1,6 +1,5 @@
 'use strict';
 
-var newGameArray;
 var nameInput =  userName;
 var clearBoard = document.getElementById('clear-button');
 var scoreTableEl = document.getElementById('scores-table');
@@ -8,26 +7,25 @@ var compareCheckBox = document.getElementById('compare-type');
 
 function clearButtonClick() {
   localStorage.clear();
-  scoresListEl.innerHTML = '';
-  newGameArray = [];
+  scorestableEl.innerHTML = '';
 }
 // The code I used as the model (AveryPratt/Jigsaw-Puzzle) for our scores.js had the line below and it was commented out so I wrote it in case we missed functionality and needed it/KDR
 // startGameButton.addEventListener('click', startButtonClick);
 
-function compareScores(score1, score2){
-  if(parseFloat(score1.time) > parseFloat(score2.time)){
-    return 1;
-  }
-  else return -1;
-}
-function compareScoresGraded(score1, score2){
-  if(parseFloat(score1.time) / score1.turns > parseFloat(score2.time) / score2.turns){
-    return 1;
-  }
-  else return -1;
-}
-
-var currentCompareFunction;
+// function compareScores(score1, score2){
+//   if(parseFloat(score1.time) > parseFloat(score2.time)){
+//     return 1;
+//   }
+//   else return -1;
+// }
+// function compareScoresGraded(score1, score2){
+//   if(parseFloat(score1.time) / score1.turns > parseFloat(score2.time) / score2.turns){
+//     return 1;
+//   }
+//   else return -1;
+// }
+//
+// var currentCompareFunction;
 
 function makeElement(type, userName, score, parent) {
   var newEl = document.createElement(type);
@@ -38,9 +36,8 @@ function makeElement(type, userName, score, parent) {
 
 function displayScores() {
   scoreTableEl.textContent = '';
-  for (var i = 0; i < scoreArray.length; i++) {
-    makeElement('td', 'userName', 'score', 'tr');
-  }
+  makeElement('td', 'userName', 'score', 'tr');
+
   scoreTable.appendChild(trEl);
 }
 
@@ -58,11 +55,10 @@ function handleGameForm(e) {
 
 // iife
 (function checkLocalStorage(){
-  if(localStorage.getItem('gameArrayEl')){
-    var loadOldGames = localStorage.getItem('gameArrayEl');
-    newGameArray = JSON.parse(loadOldGames);
+  if(localStorage.getItem('score', 'counter')){
+    var score = JSON.parse(counter);
   } else {
-    newGameArray = [];
+    counter = 0;
   }
 }());
 
