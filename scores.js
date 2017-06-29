@@ -55,7 +55,7 @@ function handleGameForm(e) {
 
 // iife
 (function checkLocalStorage(){
-  if(localStorage.getItem('counter', 'score')){
+  if(localStorage.getItem('score', 'counter')){
     var score = JSON.parse(counter);
   } else {
     counter = 0;
