@@ -54,7 +54,7 @@ function shuffle() {
 }
 
 function triggerSoundSetting() {
-  if (soundChoice === '1') {
+  if (soundChoice === 1) {
     var audio = document.getElementById('audio');
     audio.play();
   } else {
@@ -157,6 +157,7 @@ function getSoundFromLocalStorage() {
   }
   return soundChoice;
 }
+
 initRender();
 getSoundFromLocalStorage();
 newGameListener();
