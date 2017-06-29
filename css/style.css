@@ -139,6 +139,8 @@ form {
 }
 
 #gabby aside {
+  position:relative;
+
   width:300px;
   text-align: right;
   bottom: 80px;
