@@ -152,6 +152,16 @@ img {
 #descrip {
   margin-bottom: 10px;
 }
+
+#gameForm {
+  left: 300px;
+  border: none;
+}
+
+#fieldset {
+  border-style: none;
+}
+
 /*clock style*/
 #clock {
   text-align: left;
