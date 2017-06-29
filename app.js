@@ -3,8 +3,11 @@ var clickNewGameButton = document.getElementById('new-game');
 var bradyTable = document.getElementById('bradyTable');
 var correctImage = document.getElementById('marsha');
 var incorrectImage = document.getElementById('bradyTable');
+var clock = document.getElementById('clockdiv');
+var secondsSpan = clock.querySelector('.seconds');
 var counter = 0;
 var array = [];
+var interval = null;
 
 function BradyImage (src, name) {
   this.src = src;
@@ -59,9 +62,15 @@ function shuffle() {
 function newGameListener() {
   console.log('Inside newGameListener!');
   clickNewGameButton.addEventListener('click', handleNewGameClick);
+  // clickNewGameButton.addEventListener('click', getTimeRemaining);
+  // clickNewGameButton.addEventListener('click', initializeClock);
 }
 
-// Correct Image Listener
+// function timerListener() {
+//   console.log('Inside timerListener!');
+//   clickNewGameButton.addEventListener('click', getTimeRemaining);
+// }
+
 function correctImageListener() {
   console.log('Inside correctImageListener!');
   correctImage = document.getElementById('marsha');
@@ -86,6 +95,9 @@ function handleNewGameClick(event) {
   counter = 0;
   shuffle();
   initRender();
+  // getTimeRemaining();
+  initializeClock();
+  // setInterval(initializeClock, 1000);
 }
 
 // Correct Image Handler
@@ -113,6 +125,40 @@ function handleIncorrectImageClick(event) {
   shuffle();
   initRender();
 }
+
+//clock countdown
+function getTimeRemaining(endtime) {
+  console.log('hello');
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor(t / 1000);
+  console.log(t);
+  console.log(seconds);
+  return {
+    'total': t,
+    'seconds': seconds
+  };
+}
+
+function initializeClock() {
+  var endtime = new Date(Date.parse(new Date()) + 60 * 1000);
+  clearInterval(interval);
+
+  console.log('ENDTIME: ', endtime);
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+    console.log(t.total);
+    console.log(t.seconds);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+    if (t.seconds <= 0) {
+      clearInterval(interval);
+      console.log('finished');
+    }
+  }
+  interval = setInterval(updateClock, 1);
+}
+
+initializeClock();
 
 initRender();
 newGameListener();
