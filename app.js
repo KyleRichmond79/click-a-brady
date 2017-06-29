@@ -113,10 +113,21 @@ function handleIncorrectImageClick(event) {
   shuffle();
   initRender();
 }
+
+// function that calls localStorage for counter,
+// redirects user to Scores page when seconds reach 0
+function handleEndTime(seconds) {
+  if (seconds === 0) {
+    // call Kyle's localStorage function
+    location.href = 'scores.html';
+  }
+}
+
 //clock countdown
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor(t / 1000);
+  handleEndTime(seconds);
   return {
     'total': t,
     'seconds': seconds
