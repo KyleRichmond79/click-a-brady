@@ -4,6 +4,10 @@ body {
   font-family: helvetica;
 }
 
+h2 {
+  text-align: center;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -42,9 +46,12 @@ section img {
 }
 
 button {
+  display:block;
+  position: relative;
+  right: 100px;
   border: none;
   padding: 10px 30px;
-  background: #000;
+  background: blue;
   color: #fff;
   border-radius: 5px;
   font-size: 16px;
@@ -181,7 +188,7 @@ form {
   left: 55px;
 }
 
-img {
+section img {
   position: relative;
   left: 20px;
 }
@@ -189,6 +196,41 @@ img {
 #descrip {
   margin-bottom: 10px;
 }
+
 html {
   background-color: black;
+}
+
+#clock {
+  text-align: left;
+}
+#clockdiv{
+  display:block;
+    position:relative;
+    left: 430px;
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: orange;
+    display: inline-block;
+}
+
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: grey;
+    display: inline-block;
+}
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
 }
