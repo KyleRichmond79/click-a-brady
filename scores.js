@@ -38,7 +38,6 @@ function makeElement(type, userName, score, parent) {
 
 function displayScores() {
   scoreTableEl.textContent = '';
-  console.log('do something!');
   for (var i = 0; i < scoreArray.length; i++) {
     makeElement('td', 'userName', 'score', 'tr');
   }
@@ -51,7 +50,6 @@ compareCheckBox.addEventListener('change', displayScores);
 function handleGameForm(e) {
   // event.preventDefault();
   var userName = event.target.form.elements.nameInput.value;
-  console.log(nameInput);
 
   if (!userName.value) {
     alert('You must enter a name');
@@ -63,9 +61,7 @@ function handleGameForm(e) {
   if(localStorage.getItem('gameArrayEl')){
     var loadOldGames = localStorage.getItem('gameArrayEl');
     newGameArray = JSON.parse(loadOldGames);
-    console.log('newGameArray: ', newGameArray);
   } else {
-    console.log('nothing found in localStorage');
     newGameArray = [];
   }
 }());
