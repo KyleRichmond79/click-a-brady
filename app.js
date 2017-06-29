@@ -4,7 +4,9 @@ var bradyTable = document.getElementById('bradyTable');
 var correctImage = document.getElementById('marsha');
 var incorrectImage = document.getElementById('bradyTable');
 var counter = 0;
+var soundChoice;
 var array = [];
+var audioElement = document.getElementById('marshaAudio');
 
 function BradyImage (src, name) {
   this.src = src;
@@ -51,6 +53,15 @@ function shuffle() {
   // console.log('Randomized values: ' + array);
   return array;
   initRender();
+}
+
+function triggerSoundSetting() {
+  if (soundChoice === '1') {
+    var audio = document.getElementById('audio');
+    audio.play();
+  } else {
+    console.log('Sound turned off!!');
+  }
 }
 
 // New Game Listener
@@ -100,6 +111,7 @@ function handleCorrectImageClick(event) {
   console.log('Counter is ' + counter);
   shuffle();
   initRender();
+  triggerSoundSetting();
 }
 
 // Incorrect Image Handler
@@ -114,7 +126,21 @@ function handleIncorrectImageClick(event) {
   initRender();
 }
 
+// retrieves sound preference data from Local Storage
+function getSoundFromLocalStorage() {
+// if localStorage exists
+  if (localStorage.length > 0) {
+      // retrieve, parse, assign to array of objects
+    soundChoice = JSON.parse(localStorage.getItem('soundPref'));
+    console.log('Retrieved storage is ' + soundChoice);
+  } else {
+    console.log('Nothing currently in storage!');
+  }
+  return soundChoice;
+}
+
 initRender();
+getSoundFromLocalStorage();
 newGameListener();
 incorrectImageListener();
 correctImageListener();
