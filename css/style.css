@@ -152,7 +152,6 @@ img {
 #descrip {
   margin-bottom: 10px;
 }
-<<<<<<< HEAD
 
 #gameForm {
   left: 300px;
@@ -161,36 +160,4 @@ img {
 
 #fieldset {
   border-style: none;
-=======
-/*clock style*/
-#clock {
-  text-align: left;
-}
-#clockdiv{
-    font-family: sans-serif;
-    color: #fff;
-    display: inline-block;
-    font-weight: 100;
-    text-align: center;
-    font-size: 30px;
-}
-
-#clockdiv > div{
-    padding: 10px;
-    border-radius: 3px;
-    background: orange;
-    display: inline-block;
-}
-
-#clockdiv div > span{
-    padding: 15px;
-    border-radius: 3px;
-    background: grey;
-    display: inline-block;
-}
-
-.smalltext{
-    padding-top: 5px;
-    font-size: 16px;
->>>>>>> 54f71884be7213b8cdc4d27e36600acee3a4f6e2
 }
