@@ -36,9 +36,8 @@ function makeElement(type, userName, score, parent) {
 
 function displayScores() {
   scoreTableEl.textContent = '';
-  for (var i = 0; i < scoreArray.length; i++) {
-    makeElement('td', 'userName', 'score', 'tr');
-  }
+  makeElement('td', 'userName', 'score', 'tr');
+
   scoreTable.appendChild(trEl);
 }
 
@@ -56,7 +55,7 @@ function handleGameForm(e) {
 
 // iife
 (function checkLocalStorage(){
-  if(localStorage.getItem('counter')){
+  if(localStorage.getItem('counter', 'score')){
     var score = JSON.parse(counter);
   } else {
     counter = 0;

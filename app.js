@@ -81,7 +81,7 @@ function incorrectImageListener() {
 }
 
 // sending counter to local storage
-localStorage.setItem(counter);
+localStorage.setItem('counter', 'score');
 
 // New Game Handler
 function handleNewGameClick(event) {
