@@ -137,7 +137,7 @@ function getTimeRemaining(endtime) {
 }
 
 function initializeClock() {
-  var endtime = new Date(Date.parse(new Date()) + 60 * 1000);
+  var endtime = new Date(Date.parse(new Date()) + 20 * 1000);
   clearInterval(interval);
 
   function updateClock() {
@@ -150,7 +150,7 @@ function initializeClock() {
   interval = setInterval(updateClock, 1);
 }
 
-initializeClock();
+// initializeClock();
 
 // retrieves sound preference data from Local Storage
 function getSoundFromLocalStorage() {
