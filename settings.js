@@ -1,5 +1,6 @@
 'use strict';
 
+// Data
 var soundPreference = document.getElementsByName('sound');
 var currentValue = 1;
 var soundSelect;
