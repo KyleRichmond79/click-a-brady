@@ -2,11 +2,13 @@ body {
   width:960px;
   margin: 0 auto;
   font-family: helvetica;
+  background-color: #311E10;
 }
 
 a {
   text-decoration: none;
   color: #A4A9AD;
+  font-size: 24px;
 }
 
 a:hover {
@@ -35,6 +37,7 @@ section img {
   margin:12px;
   height: 250px;
   width:250px;
+  border-radius: 1000px;
 }
 
 footer {
@@ -51,17 +54,23 @@ nav ul li:hover {
   background-color: orange;
 }
 
+.header {
+  font-size: 80px;
+}
 h1 {
   text-align: center;
+  color: #DD6031;
 }
 
 p {
-  color:black;
+  color:#EABE7C;
   text-align: center;
+  line-height: 1.8;
+  font-size: 18px;
 }
 
 main {
-background-color: #ECE4B7;;
+/*background-color: #ECE4B7;;*/
 }
 
 #foot {
