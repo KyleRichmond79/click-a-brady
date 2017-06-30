@@ -37,7 +37,7 @@ main ul li {
 }
 
 section img {
-  margin:12px;
+  margin:5px;
   height: 250px;
   width:250px;
 }
@@ -55,7 +55,7 @@ button {
 }
 
 button:hover {
-  background: green;
+  background: #0AA0F3;
 }
 
 footer {
@@ -70,7 +70,7 @@ nav {
 }
 
 nav ul li:hover {
-  background-color: orange;
+  background: #0AA0F3;
 }
 
 h1 {
@@ -78,6 +78,8 @@ h1 {
 }
 
 p {
+  font-weight: bold;
+  font-size: 20px;
   color:black;
   text-align: center;
 }
@@ -88,10 +90,10 @@ main {
 
 #bradyTable {
   position: relative;
-  left: 35px;
+  left: 85px;
   background-color: #0AA0F3;
-  width: 900px;
-  height: 900px;
+  width: 800px;
+  height: 800px;
 }
 
 #new-game {
@@ -100,9 +102,17 @@ main {
 }
 
 #foot {
+  color: grey;
   text-align: center;
   position: relative;
-  top: 70px;
+  top: 15px;
+
+}
+
+#teammail {
+  text-align: center;
+  position: relative;
+  top: 15px;
 }
 
 table {
@@ -171,6 +181,8 @@ img {
   text-align: left;
 }
 #clockdiv{
+    position: relative;
+    left: 400px;
     font-family: sans-serif;
     color: #fff;
     display: inline-block;
@@ -182,18 +194,22 @@ img {
 #clockdiv > div{
     padding: 10px;
     border-radius: 3px;
-    background: orange;
+    background: #0AA0F3;
     display: inline-block;
 }
 
 #clockdiv div > span{
     padding: 15px;
     border-radius: 3px;
-    background: grey;
+    background: #EF5B5B;
     display: inline-block;
 }
 
 .smalltext{
     padding-top: 5px;
     font-size: 16px;
+}
+
+h2 {
+  text-align: center;
 }
