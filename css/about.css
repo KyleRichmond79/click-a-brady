@@ -1,3 +1,7 @@
+html {
+  background: #0AA0F3;
+}
+
 body {
   width:960px;
   margin: 0 auto;
@@ -6,7 +10,7 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #A4A9AD;
 }
 
 a:hover {
@@ -14,7 +18,7 @@ a:hover {
 }
 
 header {
-  background: #444;
+  background-color: #23001E;
   height: 100px;
 }
 
@@ -39,7 +43,7 @@ section img {
 
 footer {
   clear: both;
-  background: #444;
+  background: #23001E;
   height: 150px;
 }
 
@@ -48,7 +52,7 @@ nav {
 }
 
 nav ul li:hover {
-  background-color: orange;
+  background-color: #0AA0F3;
 }
 
 h1 {
@@ -61,13 +65,14 @@ p {
 }
 
 main {
-  background-color: grey;
+  background-color: #EF5B5B;;
 }
 
 #foot {
+  color: #A4A9AD;
   text-align: center;
   position: relative;
-  top: 70px;
+  top: 15px;
 }
 
 #gabby {
@@ -153,4 +158,10 @@ img {
 
 #descrip {
   margin-bottom: 10px;
+}
+
+#teammail {
+  text-align: center;
+  position: relative;
+  top: 15px;
 }

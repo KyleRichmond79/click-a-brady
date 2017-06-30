@@ -70,7 +70,7 @@ nav {
 }
 
 nav ul li:hover {
-  background-color: orange;
+  background: #0AA0F3;
 }
 
 h1 {
@@ -90,10 +90,10 @@ main {
 
 #bradyTable {
   position: relative;
-  left: 35px;
+  left: 85px;
   background-color: #0AA0F3;
-  width: 900px;
-  height: 900px;
+  width: 800px;
+  height: 800px;
 }
 
 #new-game {
@@ -102,9 +102,17 @@ main {
 }
 
 #foot {
+  color: grey;
   text-align: center;
   position: relative;
-  top: 70px;
+  top: 15px;
+
+}
+
+#teammail {
+  text-align: center;
+  position: relative;
+  top: 15px;
 }
 
 table {
