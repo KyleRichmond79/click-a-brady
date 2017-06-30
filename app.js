@@ -55,7 +55,7 @@ function shuffle() {
 }
 
 function triggerSoundSetting() {
-  if (soundChoice === '1') {
+  if (soundChoice === 1) {
     var audio = document.getElementById('audio');
     audio.play();
   } else {
@@ -136,7 +136,7 @@ function handleEndTime(seconds) {
   }
 }
 
-//clock countdownit
+//clock countdown
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
   seconds = Math.floor(t / 1000);
@@ -160,8 +160,6 @@ function initializeClock() {
   }
   interval = setInterval(updateClock, 1);
 }
-
-initializeClock();
 
 // retrieves sound preference data from Local Storage
 function getSoundFromLocalStorage() {
