@@ -9,6 +9,7 @@ var counter = 0;
 var soundChoice;
 var array = [];
 var interval = null;
+var seconds = null;
 
 function BradyImage (src, name) {
   this.src = src;
@@ -54,7 +55,7 @@ function shuffle() {
 }
 
 function triggerSoundSetting() {
-  if (soundChoice === 1) {
+  if (soundChoice === '1') {
     var audio = document.getElementById('audio');
     audio.play();
   } else {
@@ -81,8 +82,8 @@ function incorrectImageListener() {
 }
 
 // sending counter to local storage
-function scoreToLocalStorage() {
-  localStorage.setItem('score', 'counter');
+function scoreToLocalStorage(counter) {
+  localStorage.setItem('score', JSON.stringify(counter));
 }
 
 // New Game Handler
@@ -98,37 +99,47 @@ function handleNewGameClick(event) {
 // Correct Image Handler
 function handleCorrectImageClick(event) {
   event.preventDefault();
-  bradyTable.innerHTML = '';
-  // added 2 instead of 1 because clicking anywhere on bradyTable incl Marsha
-  // subtracts 1 from counter
-  counter += 2;
-  shuffle();
-  initRender();
-  triggerSoundSetting();
+
+  if (seconds === null) {
+  } else {
+    bradyTable.innerHTML = '';
+    // added 2 instead of 1 because clicking anywhere on bradyTable incl Marsha
+    // subtracts 1 from counter
+    counter += 2;
+    shuffle();
+    initRender();
+    triggerSoundSetting();
+    // console.log(counter);
+  }
 }
 
 // Incorrect Image Handler
 function handleIncorrectImageClick(event) {
   event.preventDefault();
-  bradyTable.innerHTML = '';
-  counter -= 1;
-  shuffle();
-  initRender();
+
+  if (seconds === null) {
+  } else {
+    bradyTable.innerHTML = '';
+    counter -= 1;
+    shuffle();
+    initRender();
+    // console.log(counter);
+  }
 }
 
 // function that calls localStorage for counter,
 // redirects user to Scores page when seconds reach 0
 function handleEndTime(seconds) {
   if (seconds === 0) {
-    // call Kyle's localStorage function
+    scoreToLocalStorage(counter);
     location.href = 'scores.html';
   }
 }
 
-//clock countdown
+//clock countdownit
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor(t / 1000);
+  seconds = Math.floor(t / 1000);
   handleEndTime(seconds);
   return {
     'total': t,
@@ -150,7 +161,7 @@ function initializeClock() {
   interval = setInterval(updateClock, 1);
 }
 
-// initializeClock();
+initializeClock();
 
 // retrieves sound preference data from Local Storage
 function getSoundFromLocalStorage() {
@@ -162,7 +173,6 @@ function getSoundFromLocalStorage() {
   }
   return soundChoice;
 }
-
 initRender();
 getSoundFromLocalStorage();
 newGameListener();

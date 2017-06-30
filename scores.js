@@ -1,65 +1,54 @@
 'use strict';
+var score;
+var nameInput = document.getElementById('playerName');
+var scoreTable = document.getElementById('scoreTable');
 
-var nameInput =  userName;
-var clearBoard = document.getElementById('clear-button');
-var scoreTableEl = document.getElementById('scores-table');
-var compareCheckBox = document.getElementById('compare-type');
-
-function clearButtonClick() {
-  localStorage.clear();
-  scorestableEl.innerHTML = '';
-}
-// The code I used as the model (AveryPratt/Jigsaw-Puzzle) for our scores.js had the line below and it was commented out so I wrote it in case we missed functionality and needed it/KDR
-// startGameButton.addEventListener('click', startButtonClick);
-
-// function compareScores(score1, score2){
-//   if(parseFloat(score1.time) > parseFloat(score2.time)){
-//     return 1;
-//   }
-//   else return -1;
+// function makeElement(type, userName, score, parent) {
+//   var newEl = document.createElement(type);
+//   newEl.textContent = userName;
+//   parent.appendChild(newEl);
+//   newEl = document.createElement(type);
+//   newEl.textContent = score;
+//   parent.appendChild(newEl);
 // }
-// function compareScoresGraded(score1, score2){
-//   if(parseFloat(score1.time) / score1.turns > parseFloat(score2.time) / score2.turns){
-//     return 1;
-//   }
-//   else return -1;
-// }
-//
-// var currentCompareFunction;
 
-function makeElement(type, userName, score, parent) {
-  var newEl = document.createElement(type);
-  newEl.textContent = userName;
-  newEl.textContent = score;
-  parent.appendChild(newEl);
+function displayScores(userName) {
+  scoreTableEl.innerHTML = '';
+  console.log(userName);
+  makeElement('td', userName, score, 'tr');
+
 }
 
-function displayScores() {
-  scoreTableEl.textContent = '';
-  makeElement('td', 'userName', 'score', 'tr');
+function handleGameForm(event) {
+  console.log(event);
+  event.preventDefault();
+  console.log('why are you broken?');
+  var userName = event.target.playerName.value;
+  console.log('username', userName);
 
+  if (!userName) {
+    alert('You must enter a name');
+  }
+  var trEl = document.createElement('tr');
+  var tdEl = document.createElement('td');
+  tdEl.textContent = userName;
+  trEl.appendChild(tdEl);
+  tdEl = document.createElement('td');
+
+  tdEl.textContent = JSON.parse(localStorage.score);
+  trEl.appendChild(tdEl);
   scoreTable.appendChild(trEl);
 }
 
-clearBoard.addEventListener('click', clearButtonClick);
-compareCheckBox.addEventListener('change', displayScores);
-
-function handleGameForm(e) {
-  // event.preventDefault();
-  var userName = event.target.form.elements.nameInput.value;
-
-  if (!userName.value) {
-    alert('You must enter a name');
-  }
+function checkLocalStorage() {
+  if (localStorage.length > 0) {
+    score = JSON.parse(localStorage.getItem('score'));
+  } else {}
+  return score;
 }
 
-// iife
-(function checkLocalStorage(){
-  if(localStorage.getItem('score', 'counter')){
-    var score = JSON.parse(counter);
-  } else {
-    counter = 0;
-  }
-}());
+checkLocalStorage();
 
-displayScores();
+var submit = document.getElementById('gameForm');
+console.log(submit);
+submit.addEventListener('submit', handleGameForm);
