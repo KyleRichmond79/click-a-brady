@@ -1,12 +1,17 @@
+html {
+  background: #311E10;
+}
+
 body {
   width:960px;
   margin: 0 auto;
   font-family: helvetica;
+  background-color: #311E10;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #A4A9AD;
 }
 
 a:hover {
@@ -14,7 +19,7 @@ a:hover {
 }
 
 header {
-  background: #444;
+  background: #23001E;
   height: 100px;
 }
 
@@ -35,39 +40,49 @@ section img {
   margin:12px;
   height: 250px;
   width:250px;
+  border-radius: 1000px;
 }
 
 footer {
   clear: both;
-  background: #444;
+  background: #23001E;
   height: 150px;
 }
 
 nav {
   text-align: center;
+  font-size: 24px;
 }
 
 nav ul li:hover {
-  background-color: orange;
+  background-color: #0AA0F3;
 }
 
+.header {
+  font-size: 80px;
+}
 h1 {
   text-align: center;
+  color: #DD6031;
 }
 
 p {
-  color:black;
+  color:#EABE7C;
   text-align: center;
+  line-height: 1.8;
+  font-size: 18px;
 }
 
 main {
-  background-color: grey;
+/*background-color: #ECE4B7;;*/
 }
 
 #foot {
+  color: #A4A9AD;
   text-align: center;
   position: relative;
-  top: 70px;
+  top: 15px;
+  color: #A4A9AD;
 }
 
 #gabby {
@@ -153,4 +168,10 @@ img {
 
 #descrip {
   margin-bottom: 10px;
+}
+
+#teammail {
+  text-align: center;
+  position: relative;
+  top: 15px;
 }

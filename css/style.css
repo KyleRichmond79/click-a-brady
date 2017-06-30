@@ -1,13 +1,15 @@
 body {
   width:960px;
   margin: 0 auto;
-  font-family: font-family: 'Luckiest Guy', cursive;
+  font-family: helvetica;
   background-image: url('https://media.giphy.com/media/l3vRa54QvUSqyYKME/giphy.gif');
 }
 
 a {
   text-decoration: none;
   color: #A4A9AD;
+  text-shadow: 1px 1px black;
+  font-size: 24px;
 }
 
 a:hover {
@@ -63,10 +65,12 @@ footer {
   background: #23001E;
   height: 150px;
   margin-bottom: 40px;
+  line-height: 0.3px;
 }
 
 nav {
   text-align: center;
+  font-size: 24px;
 }
 
 nav ul li:hover {
@@ -74,16 +78,36 @@ nav ul li:hover {
 }
 
 h1 {
+  color: purple;
   text-align: center;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 80px;
+  text-shadow: -9px -8px orange;
+  padding-top: 20px;
+  line-height: 0.5px
+}
+.settings {
+  text-align: center;
+  font-family: helvetica;
+  font-size: 30px;
+  color: black;
+  text-shadow: none;
+  padding-top: 60px;
+}
+h2 {
+  text-align: center;
+  line-height: 0px;
+  font-size: 18px;
 }
 
 p {
-  color:black;
+  color: black;
   text-align: center;
 }
 
 main {
   background-color: #EF5B5B;
+  height: 350px;
 }
 
 #bradyTable {
@@ -96,25 +120,27 @@ main {
 
 #new-game {
   position: relative;
-  left: 415px;
+  left: 410px;
+
 }
 
 #foot {
   text-align: center;
   position: relative;
   top: 70px;
+  color: #A4A9AD;
 }
 
 table {
   position: relative;
   left: 370px;
   border: 2px black solid;
-  background-color: black;
+  background-color: orange;
 }
 
 tr {
-  border: 2px black solid;
-  background-color: grey;
+  border: 2px orange solid;
+  background-color: #A9CCE3;
 }
 
 td {
@@ -126,6 +152,7 @@ td {
 form {
   position:relative;
   left: 430px;
+  width: 400px;
 }
 
 #gabby {
@@ -164,6 +191,7 @@ img {
 
 #fieldset {
   border-style: none;
+  width: 400px;
 }
 
 /*clock style*/
@@ -172,24 +200,26 @@ img {
 }
 #clockdiv{
     font-family: sans-serif;
-    color: #fff;
+    color: black;
     display: inline-block;
     font-weight: 100;
     text-align: center;
     font-size: 30px;
+    margin: auto 415px auto 435px;
 }
 
 #clockdiv > div{
     padding: 10px;
     border-radius: 3px;
-    background: orange;
-    display: inline-block;
+    background: #A9CCE3;
+    /*display: inline-block;*/
+    text-align: center;
 }
 
 #clockdiv div > span{
     padding: 15px;
     border-radius: 3px;
-    background: grey;
+    background: white;
     display: inline-block;
 }
 
