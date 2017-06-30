@@ -54,7 +54,7 @@ function shuffle() {
 }
 
 function triggerSoundSetting() {
-  if (soundChoice === 1) {
+  if (soundChoice === '1') {
     var audio = document.getElementById('audio');
     audio.play();
   } else {
@@ -81,8 +81,8 @@ function incorrectImageListener() {
 }
 
 // sending counter to local storage
-function scoreToLocalStorage() {
-  localStorage.setItem('score', 'counter');
+function scoreToLocalStorage(counter) {
+  localStorage.setItem('score', JSON.stringify(counter));
 }
 
 // New Game Handler
@@ -120,7 +120,7 @@ function handleIncorrectImageClick(event) {
 // redirects user to Scores page when seconds reach 0
 function handleEndTime(seconds) {
   if (seconds === 0) {
-    // call Kyle's localStorage function
+    scoreToLocalStorage(counter);
     location.href = 'scores.html';
   }
 }
@@ -150,7 +150,7 @@ function initializeClock() {
   interval = setInterval(updateClock, 1);
 }
 
-// initializeClock();
+initializeClock();
 
 // retrieves sound preference data from Local Storage
 function getSoundFromLocalStorage() {
@@ -162,7 +162,6 @@ function getSoundFromLocalStorage() {
   }
   return soundChoice;
 }
-
 initRender();
 getSoundFromLocalStorage();
 newGameListener();
