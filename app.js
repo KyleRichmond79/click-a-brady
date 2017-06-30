@@ -136,7 +136,7 @@ function handleEndTime(seconds) {
   }
 }
 
-//clock countdown
+//clock countdownit
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
   seconds = Math.floor(t / 1000);
