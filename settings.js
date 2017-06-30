@@ -4,6 +4,8 @@ var soundPreference = document.getElementsByName('sound');
 var currentValue = 1;
 var soundSelect;
 
+// Sets which settings button is clicked on page load
+// based on default or most recent user selection
 function startValue() {
   if (localStorage.soundPref === '2') {
     document.getElementById('sound-off').click();
@@ -12,6 +14,7 @@ function startValue() {
   }
 }
 
+// Passes user selection data to localStorage
 function handleClick(myRadio) {
   currentValue = parseInt(myRadio.value);
   console.log(myRadio.value);
@@ -20,21 +23,9 @@ function handleClick(myRadio) {
   getSoundFromLocalStorage();
 }
 
-// store data in localStorage every time the data changes
+// Stores user selection data in localStorage every time the data changes
 function storeToLocalStorage() {
   localStorage.setItem('soundPref', JSON.stringify(currentValue));
 }
 
-// retrieves sound preference data from Local Storage
-function getSoundFromLocalStorage() {
-// if localStorage exists
-  if (localStorage.length > 0) {
-      // retrieve, parse, assign to array of objects
-    soundSelect = JSON.parse(localStorage.getItem('soundPref'));
-  } else {
-  }
-  return soundSelect;
-}
-
 startValue();
-storeToLocalStorage();
