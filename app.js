@@ -9,6 +9,7 @@ var counter = 0;
 var soundChoice;
 var array = [];
 var interval = null;
+var seconds = null;
 
 function BradyImage (src, name) {
   this.src = src;
@@ -98,22 +99,32 @@ function handleNewGameClick(event) {
 // Correct Image Handler
 function handleCorrectImageClick(event) {
   event.preventDefault();
-  bradyTable.innerHTML = '';
-  // added 2 instead of 1 because clicking anywhere on bradyTable incl Marsha
-  // subtracts 1 from counter
-  counter += 2;
-  shuffle();
-  initRender();
-  triggerSoundSetting();
+
+  if (seconds === null) {
+  } else {
+    bradyTable.innerHTML = '';
+    // added 2 instead of 1 because clicking anywhere on bradyTable incl Marsha
+    // subtracts 1 from counter
+    counter += 2;
+    shuffle();
+    initRender();
+    triggerSoundSetting();
+    // console.log(counter);
+  }
 }
 
 // Incorrect Image Handler
 function handleIncorrectImageClick(event) {
   event.preventDefault();
-  bradyTable.innerHTML = '';
-  counter -= 1;
-  shuffle();
-  initRender();
+
+  if (seconds === null) {
+  } else {
+    bradyTable.innerHTML = '';
+    counter -= 1;
+    shuffle();
+    initRender();
+    // console.log(counter);
+  }
 }
 
 // function that calls localStorage for counter,
@@ -128,7 +139,7 @@ function handleEndTime(seconds) {
 //clock countdown
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor(t / 1000);
+  seconds = Math.floor(t / 1000);
   handleEndTime(seconds);
   return {
     'total': t,
