@@ -1,3 +1,7 @@
+html {
+  background: #0AA0F3;
+}
+
 body {
   width:960px;
   margin: 0 auto;
@@ -8,7 +12,6 @@ body {
 a {
   text-decoration: none;
   color: #A4A9AD;
-  font-size: 24px;
 }
 
 a:hover {
@@ -51,7 +54,7 @@ nav {
 }
 
 nav ul li:hover {
-  background-color: orange;
+  background-color: #0AA0F3;
 }
 
 .header {
@@ -74,9 +77,10 @@ main {
 }
 
 #foot {
+  color: #A4A9AD;
   text-align: center;
   position: relative;
-  top: 70px;
+  top: 15px;
   color: #A4A9AD;
 }
 
@@ -163,4 +167,10 @@ img {
 
 #descrip {
   margin-bottom: 10px;
+}
+
+#teammail {
+  text-align: center;
+  position: relative;
+  top: 15px;
 }
