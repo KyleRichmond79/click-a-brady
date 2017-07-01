@@ -20,13 +20,14 @@ function handleClick(myRadio) {
   currentValue = parseInt(myRadio.value);
   console.log(myRadio.value);
   console.log(currentValue);
-  storeToLocalStorage(currentValue);
+  storeToLocalStorage();
   getSoundFromLocalStorage();
 }
 
 // Stores user selection data in localStorage every time the data changes
 function storeToLocalStorage() {
   localStorage.setItem('soundPref', JSON.stringify(currentValue));
+  console.log(currentValue);
 }
 
 startValue();
