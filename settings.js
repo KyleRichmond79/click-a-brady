@@ -21,7 +21,6 @@ function handleClick(myRadio) {
   console.log(myRadio.value);
   console.log(currentValue);
   storeToLocalStorage();
-  getSoundFromLocalStorage();
 }
 
 // Stores user selection data in localStorage every time the data changes
