@@ -6,7 +6,7 @@ var incorrectImage = document.getElementById('bradyTable');
 var clock = document.getElementById('clockdiv');
 var secondsSpan = clock.querySelector('.seconds');
 var counter = 0;
-var soundChoice;
+var soundChoice = null;
 var array = [];
 var interval = null;
 var seconds = null;
@@ -55,7 +55,11 @@ function shuffle() {
 }
 
 function triggerSoundSetting() {
-  if (soundChoice === 1) {
+  if (soundChoice === null) {
+    var audio = document.getElementById('audio');
+    audio.play();
+  }
+  else if (soundChoice === 1) {
     var audio = document.getElementById('audio');
     audio.play();
   } else {
